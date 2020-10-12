@@ -10,6 +10,6 @@ import retrofit2.http.Path;
 public interface RetrofitService {
 
     @GET("{path}")
-    Call<List<Repository>> findByName(@Path("path") String userName);
+    Call<List<Repository>> findByName(@Path(value = "path", encoded = true) String userName);
 
 }
